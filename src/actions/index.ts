@@ -43,6 +43,7 @@ import getAssetsByOwnerAction from "./helius/getAssetsbyOwner";
 import getWebhookAction from "./helius/getWebhook";
 import parseSolanaTransactionAction from "./helius/parseTransaction";
 import sendTransactionWithPriorityFeeAction from "./helius/sendTransactionWithPriority";
+import getAssetAction from "./metaplex/getAsset";
 
 export const ACTIONS = {
   WALLET_ADDRESS_ACTION: getWalletAddressAction,
@@ -91,6 +92,7 @@ export const ACTIONS = {
   GET_WEBHOOK_ACTION: getWebhookAction,
   PARSE_TRANSACTION_ACTION: parseSolanaTransactionAction,
   SEND_TRANSACTION_WITH_PRIORITY_ACTION: sendTransactionWithPriorityFeeAction,
+  GET_ASSET_ACTION: getAssetAction,
 };
 
 export type { Action, ActionExample, Handler } from "../types/action";

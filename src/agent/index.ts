@@ -82,6 +82,7 @@ import {
   getHeliusWebhook,
   create_HeliusWebhook,
   deleteHeliusWebhook,
+  get_asset,
 } from "../tools";
 import {
   Config,
@@ -99,6 +100,7 @@ import {
   HeliusWebhookIdResponse,
   HeliusWebhookResponse,
 } from "../types";
+import { DasApiAsset } from "@metaplex-foundation/digital-asset-standard-api";
 
 /**
  * Main class for interacting with Solana blockchain
@@ -693,5 +695,9 @@ export class SolanaAgentKit {
   }
   async deleteWebhook(webhookID: string): Promise<any> {
     return deleteHeliusWebhook(this, webhookID);
+  }
+
+  async getAsset(assetId: string): Promise<DasApiAsset> {
+    return get_asset(this, assetId);
   }
 }

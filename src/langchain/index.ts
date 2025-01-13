@@ -99,6 +99,7 @@ import {
   SolanaParseTransactionHeliusTool,
   SolanaGetAllAssetsByOwner,
 } from "./index";
+import { SolanaGetAssetTool } from "./metaplex/get_asset";
 
 export function createSolanaTools(solanaKit: SolanaAgentKit) {
   return [
@@ -177,5 +178,6 @@ export function createSolanaTools(solanaKit: SolanaAgentKit) {
     new SolanaHeliusWebhookTool(solanaKit),
     new SolanaGetHeliusWebhookTool(solanaKit),
     new SolanaDeleteHeliusWebhookTool(solanaKit),
+    new SolanaGetAssetTool(solanaKit),
   ];
 }
